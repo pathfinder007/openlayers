@@ -521,7 +521,6 @@ ol.source.Vector.prototype.getFeatures = function() {
 };
 
 /**
- * @return {Array.<ol.Extent>} Extent.
  * @api
  */
 ol.source.Vector.prototype.readExtentRtree = function() {
