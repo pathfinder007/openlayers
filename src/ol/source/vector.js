@@ -520,6 +520,16 @@ ol.source.Vector.prototype.getFeatures = function() {
   return /** @type {Array.<ol.Feature>} */ (features);
 };
 
+/**
+ * @return {Array.<ol.Extent>} Extent.
+ * @api
+ */
+ol.source.Vector.prototype.readExtentRtree = function() {
+  var loadedExtentsRtree = this.loadedExtentsRtree_;
+  var cached_extents = loadedExtentsRtree.getAll();   
+  return cached_extents;
+};
+
 
 /**
  * Get all features whose geometry intersects the provided coordinate.
@@ -741,9 +751,9 @@ ol.source.Vector.prototype.isEmpty = function() {
  */
 ol.source.Vector.prototype.loadFeatures = function(
     extent, resolution, projection) {
-  console.log('MHS DEBUG VERSION');
   var loadedExtentsRtree = this.loadedExtentsRtree_;
   var extentsToLoad = this.strategy_(extent, resolution);
+  
   var i, ii;
   for (i = 0, ii = extentsToLoad.length; i < ii; ++i) {
     var extentToLoad = extentsToLoad[i];

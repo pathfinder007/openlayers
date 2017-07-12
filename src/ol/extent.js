@@ -559,6 +559,7 @@ ol.extent.getHeight = function(extent) {
  * @param {ol.Extent} extent1 Extent 1.
  * @param {ol.Extent} extent2 Extent 2.
  * @return {number} Intersection area.
+ * @api
  */
 ol.extent.getIntersectionArea = function(extent1, extent2) {
   var intersection = ol.extent.getIntersection(extent1, extent2);
