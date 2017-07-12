@@ -741,6 +741,7 @@ ol.source.Vector.prototype.isEmpty = function() {
  */
 ol.source.Vector.prototype.loadFeatures = function(
     extent, resolution, projection) {
+  console.log('MHS DEBUG VERSION');
   var loadedExtentsRtree = this.loadedExtentsRtree_;
   var extentsToLoad = this.strategy_(extent, resolution);
   var i, ii;
