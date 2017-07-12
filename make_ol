@@ -1,5 +1,6 @@
 make build
-cp build/ol.js dist/
-cp build/ol.css dist/
-cp build/ol.js.map dist/
-cp build/ol-debug.js dist/
+mkdir dist
+cp build/ol.js dist/ol.js
+cp build/ol.css dist/ol.css
+cp build/ol.js.map dist/ol.js.map
+cp build/ol-debug.js dist/ol-debug.js
